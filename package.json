@@ -1,6 +1,6 @@
 {
   "homepage": "https://johnabednego.github.io/mobile-weather",
-  "name": "aram-weather-app",
+  "name": "mobile-weather",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
