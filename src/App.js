@@ -63,11 +63,7 @@ class App extends Component {
 
   // request weather data on a default city when the page loads
   // for the first time
-  componentDidMount() {
-    let url = `${BASE_URL}?q=${this.state.city}&lang=en&units=metric&appid=${appid}`;
 
-    this.handleRequest(url);
-  }
 
   render() {
     return (
