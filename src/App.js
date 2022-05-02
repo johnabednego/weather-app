@@ -9,7 +9,7 @@ import {
 } from "./utils";
 import Dashboard from "./components/Dashboard";
 
-const appid = "faeceb16f3490b78593e40638784cb0a"
+const appid = process.env.REACT_APP_API_KEY;
 const BASE_URL = "http://api.openweathermap.org/data/2.5/weather";
 class App extends Component {
   constructor() {
