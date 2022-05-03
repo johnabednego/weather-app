@@ -10,7 +10,7 @@ class Card extends Component {
   render() {
     return (
       <div
-        className="card d-sm-none container d-flex align-items-center justify-content-center">
+        className="card d-sm-none container d-flex align-items-center justify-content-center" style={{backgroundColor:"transparent"}}>
         <img
           src={this.props.response.icon}
           className="card-img-top"
@@ -19,12 +19,12 @@ class Card extends Component {
           height={200}
         />
         <div className="card-body">
-          <h5 className="card-title">
+          <h5 className="card-title text-white">
             {`${this.props.response.country}, ${this.props.response.city} weather`}
           </h5>
-          <p className="card-text">{this.props.response.description}</p>
+          <p className="card-text text-white">{this.props.response.description}</p>
         </div>
-        <ul className="list-group list-group-flush">
+        <ul className="list-group list-group-flush" style={{borderRadius:"5px"}}>
           <li className="list-group-item"><img style={{ marginRight: "20px" }} src={temperature} />
             temperature - {this.props.response.temperature}°C
           </li>{" "}
