@@ -16,7 +16,7 @@ class NavBar extends Component {
                     </button>
                     <div class="collapse navbar-collapse" id="main_nav">
                         <ul class="navbar-nav ms-auto text-white">
-                            <li class="nav-item"><a class="nav-link" href="https://github.com/genus-corde/aram-weather-app">Github</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://github.com/johnabednego/weather-app">Github</a></li>
                             <li class="nav-item"><a class="nav-link" href="https://openweathermap.org/"> Open-Weather-Map</a></li>
                         </ul>
                     </div>
