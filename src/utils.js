@@ -30,7 +30,7 @@ const deconstructErrorResponse = (response) => {
 };
 
 const convertUnixToUTC = (unixTime) => {
-  let date = new Date(Date(unixTime));
+  let date = new Date(unixTime*1000);
   return date.toLocaleTimeString();
 };
 

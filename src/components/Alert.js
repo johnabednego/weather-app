@@ -4,7 +4,7 @@ class Alert extends Component {
   render() {
     return (
       <div
-        className="Card alert fixed-top alert-warning alert-dismissible fade show" role="alert" style={{marginTop:"100px"}}>
+        className="Card alert fixed-top alert-warning alert-dismissible fade show" role="alert" style={{marginTop:"10px"}}>
         {this.props.message}
         {/* <button
           type="button"

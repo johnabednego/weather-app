@@ -16,6 +16,7 @@ import longitude from "./images/longitude.png"
 import high_temperature from "./images/high-temperature.png"
 import low_temperature from "./images/low-temperature.png"
 
+
 class Dashboard extends Component {
     render() {
         return (
@@ -25,7 +26,7 @@ class Dashboard extends Component {
                         <div className="row">
                             <div className="col vh-100" style={{ marginTop: "120px" }}>
                                 <Card response={this.props.response} />
-                                <div className="container d-none d-sm-flex" style={{ flexDirection: "column" }}>
+                                <div className="container1 container d-none d-sm-flex" style={{ flexDirection: "column" }}>
                                     <img
                                         src={this.props.response.icon}
                                         className="card-img-top"
@@ -41,7 +42,8 @@ class Dashboard extends Component {
                                     </div>
 
                                 </div>
-                                <div className="row card-container w-100 d-none d-sm-flex" style={{ marginLeft: "6%" }}>
+
+                                <div className="row card-container w-100 d-none d-md-flex" style={{ marginLeft: "6%" }}>
                                     <div className="col-3">
                                         <h5 className="card-title text-white" style={{ textAlign: "center" }}>Main</h5>
                                         <ul className="list-group list-group-flush" style={{ borderRadius: "5px" }}>
@@ -107,6 +109,72 @@ class Dashboard extends Component {
                                     </div>
                                 </div>
 
+                            {/* Medium screen*/}
+                            <div className="row container-fluid d-none d-sm-flex d-md-none" style={{ marginLeft: "6%" }}>
+                                    <div className="col-3 " style={{width:"40%"}}>
+                                        <h5 className="card-title text-white" style={{ textAlign: "center" }}>Main</h5>
+                                        <ul className="list-group list-group-flush" style={{ borderRadius: "5px" }}>
+                                            <li className="list-group-item"><img style={{ marginRight: "20px" }} src={temperature} />
+                                                temperature - {this.props.response.temperature}°C
+                                            </li>
+                                            <li className="list-group-item"><img style={{ marginRight: "20px" }} src={low_temperature} />
+                                                temperature_min - {this.props.response.temperature_min}°C
+                                            </li>
+                                            <li className="list-group-item"><img style={{ marginRight: "20px" }} src={high_temperature} />
+                                                temperature_max - {this.props.response.temperature_max}°C
+                                            </li>
+                                            <li className="list-group-item"> <img style={{ marginRight: "20px" }} src={pressure} />
+                                                pressure - {this.props.response.pressure}mb
+                                            </li>
+                                            <li className="list-group-item"><img style={{ marginRight: "20px" }} src={humidity} />
+                                                humidity - {this.props.response.humidity}g.m-3
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className="col-3 offset-1 " style={{width:"40%"}}>
+                                        <h5 className="card-title text-white" style={{ textAlign: "center" }}>Wind</h5>
+                                        <ul className="list-group list-group-flush" style={{ borderRadius: "5px" }}>
+                                            <li className="list-group-item"><img style={{ marginRight: "20px" }} src={wind} />
+                                            wind speed  - {this.props.response.windSpeed}m/s
+                                            </li> 
+                                            <li className="list-group-item"><img style={{ marginRight: "20px" }} src={longitude} />
+                                                longitude - [{this.props.response.longitude}°C]
+                                            </li>
+                                            <li className="list-group-item"><img style={{ marginRight: "20px" }} src={latitude} />
+                                                latitude - [{this.props.response.latitude}°C]
+                                            </li>
+                                            <li className="list-group-item"><img style={{ marginRight: "20px" }} src={degree} />
+                                                degree - {this.props.response.degree}°C
+                                            </li>
+                                            <li className="list-group-item"><img style={{ marginRight: "20px" }} src={gust} />
+                                                gust - {this.props.response.gust}m/s
+                                            </li>
+                            
+                                        </ul>
+                                    </div>
+                                    <div className="col-3 offset-1" style={{width:"300px", marginLeft:"25%"}}>
+                                        <h5 className="card-title text-white" style={{ textAlign: "center" }}>Synoptic</h5>
+                                        <ul className="list-group list-group-flush" style={{ borderRadius: "5px" }}>
+                                            <li className="list-group-item"><img style={{ marginRight: "20px" }} src={sunrise} />
+                                            sunrise - {this.props.response.sunrise}
+                                            </li>
+                                            <li className="list-group-item"> <img style={{ marginRight: "20px" }} src={sunset} />
+                                            sunset - {this.props.response.sunset}
+                                            </li>
+                                            <li className="list-group-item"><img style={{ marginRight: "20px" }} src={feeling} />
+                                                feeling - {this.props.response.feeling}°C
+                                            </li>
+                                            <li className="list-group-item"><img style={{ marginRight: "20px" }} src={sea_level} />
+                                                sea_level - {this.props.response.sea_level}°C
+                                            </li>
+                                            <li className="list-group-item"><img style={{ marginRight: "20px" }} src={ground_level} />
+                                                ground_level - {this.props.response.ground_level}°C
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                   
+                                  </div>
                             </div>
                         </div>
                     </div>

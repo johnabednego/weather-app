@@ -1,6 +1,5 @@
 import Alert from "./components/Alert";
 import React, { Component } from "react";
-import Card from "./components/Card";
 import NavBar from "./components/NavBar";
 import {
   deconstructErrorResponse,
@@ -44,7 +43,7 @@ class App extends Component {
       })
       .catch((error) => {
         this.setState({
-          error: "error occurred",
+          error: "ERROR OCCURRED: Check internet connection",
         });
       });
   };

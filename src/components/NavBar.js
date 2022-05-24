@@ -1,11 +1,15 @@
 import React, { Component } from "react";
+import logo from "./images/logo192.png"
+
 
 class NavBar extends Component {
     render() {
         return (
             <header>
-            <nav className="p-3 text-white navbar navbar-expand-sm navbar-dark bg-dark fixed-top d-flex" style={{flexDirection:"column"}} >
+            <nav className="p-3 text-white navbar navbar-expand-sm navbar-dark fixed-top d-flex" style={{flexDirection:"column"}} >
                 <div className="container">
+                <img src={logo} className="logo d-none d-sm-block" width={70}
+          height={50}/>
                     <a class="navbar-brand text-white" href="/">ARAM-WeatherApp</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
                         <span class="navbar-toggler-icon"></span>
@@ -19,7 +23,7 @@ class NavBar extends Component {
                     </div>
                       
                         <form
-                            className="d-flex col-12 col-sm-auto mb-3 mb-lg-0 me-lg-3"
+                            className="d-flex col-sm-7 mb-3 mb-lg-0 me-lg-3 offset-1"
                             onSubmit={this.props.onSubmit}
                             onClick={this.props.onClick}>
                             <input
@@ -34,7 +38,7 @@ class NavBar extends Component {
                             <div className="text-end">
                                 <input
                                     type="submit"
-                                    className="btn btn-warning"
+                                    className="btn btn-primary"
                                     value="Search"
                                 />
                             </div>                       

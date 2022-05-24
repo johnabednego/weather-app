@@ -7,8 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url(components/w2.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment:fixed;
+  background-size: 100% 100%;
+  background-attachment: fixed;
   /* background: #37383d; */
 }
 
@@ -22,4 +22,59 @@ code {
   width: 25rem;
   padding: auto;
   margin: 10px auto;
+}
+
+ .container1 {
+ 
+  margin-bottom: 30px;
+  justify-content: center;
+  border-radius: 30px;
+   /* transform: translateX(50%);  */
+} 
+
+.container1 img {
+  margin: 10 auto;
+  width: 100%;
+  object-fit:fill;
+  margin-top: 65px;
+}
+
+.col {
+  width: 100%;
+  height: fit-content;
+}
+
+h5 {
+  text-align: center;
+}
+
+.col ul {
+  background-color: rgba(169, 169, 175, 0.185);
+  border-radius: 20px !important;
+  padding: 10px;
+  -webkit-backdrop-filter:blur(15px);
+  backdrop-filter: blur(15px);
+}
+
+.col ul li {
+  background-color: inherit;
+  padding: 10px;
+  color: white;
+}
+input[type="submit"] {
+  background-color: rgb(13, 36, 58);
+  border: solid 1px rgb(13, 36, 58);
+}
+.navbar form input[type="search"] {
+  border: hidden;
+  width: 60%;
+}
+
+.navbar {
+    background-color: rgba(7, 50, 61, 0.884);
+}
+.logo{
+  border-radius: 50%;
+  margin-right: 50px;
+  margin-left: -50px;
 }
